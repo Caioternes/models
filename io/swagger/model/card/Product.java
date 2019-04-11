@@ -12,10 +12,6 @@ public class Product  {
   private String name = null;
   @ApiModelProperty(value = "Permite embossing")
   private Boolean embossable = null;
-  @ApiModelProperty(value = "Status do produto")
-  private String status = null;
-  @ApiModelProperty(value = "")
-  private Group group = null;
 
  /**
    * Identificação do produto
@@ -68,40 +64,6 @@ public class Product  {
     return this;
   }
 
- /**
-   * Status do produto
-   * @return status
-  **/
-  public String getStatus() {
-    return status;
-  }
-
-  public void setStatus(String status) {
-    this.status = status;
-  }
-
-  public Product status(String status) {
-    this.status = status;
-    return this;
-  }
-
- /**
-   * Get group
-   * @return group
-  **/
-  public Group getGroup() {
-    return group;
-  }
-
-  public void setGroup(Group group) {
-    this.group = group;
-  }
-
-  public Product group(Group group) {
-    this.group = group;
-    return this;
-  }
-
 
   @Override
   public String toString() {
@@ -111,8 +73,6 @@ public class Product  {
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    embossable: ").append(toIndentedString(embossable)).append("\n");
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    group: ").append(toIndentedString(group)).append("\n");
     sb.append("}");
     return sb.toString();
   }

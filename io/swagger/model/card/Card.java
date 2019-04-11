@@ -9,8 +9,7 @@ public class Card  {
   
   @ApiModelProperty(value = "Identificador do cartão [id_processadora]")
   private Integer id = null;
-  @ApiModelProperty(value = "Estagio de cortão")
-  private String phase = null;
+
   @ApiModelProperty(value = "Status do cartão")
   private String status = null;
   @ApiModelProperty(value = "Número do cartão ofuscado")
@@ -20,8 +19,7 @@ public class Card  {
   @ApiModelProperty(value = "Nome do portador do cartão")
   private String holderName = null;
   @ApiModelProperty(value = "Validade do cartão")
-  private LocalDate validAt = null;
-  @ApiModelProperty(value = "Data de quando o cartão foi gerado")
+
   private LocalDate sinceAt = null;
   @ApiModelProperty(value = "")
   private Account account = null;
@@ -42,23 +40,6 @@ public class Card  {
 
   public Card id(Integer id) {
     this.id = id;
-    return this;
-  }
-
- /**
-   * Estagio de cortão
-   * @return phase
-  **/
-  public String getPhase() {
-    return phase;
-  }
-
-  public void setPhase(String phase) {
-    this.phase = phase;
-  }
-
-  public Card phase(String phase) {
-    this.phase = phase;
     return this;
   }
 
@@ -147,22 +128,6 @@ public class Card  {
     return this;
   }
 
- /**
-   * Data de quando o cartão foi gerado
-   * @return sinceAt
-  **/
-  public LocalDate getSinceAt() {
-    return sinceAt;
-  }
-
-  public void setSinceAt(LocalDate sinceAt) {
-    this.sinceAt = sinceAt;
-  }
-
-  public Card sinceAt(LocalDate sinceAt) {
-    this.sinceAt = sinceAt;
-    return this;
-  }
 
  /**
    * Get account

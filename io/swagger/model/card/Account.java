@@ -15,12 +15,6 @@ public class Account  {
   private Integer id = null;
   @ApiModelProperty(value = "Status da conta")
   private String status = null;
-  @ApiModelProperty(value = "Dias em atraso")
-  private Integer daysLate = null;
-  @ApiModelProperty(value = "Data de registro da conta")
-  private LocalDate dtRegistration = null;
-  @ApiModelProperty(value = "Data da última compra")
-  private LocalDate dtLastBuy = null;
   @ApiModelProperty(value = "")
   private PersonAccount person = null;
   @ApiModelProperty(value = "")
@@ -29,8 +23,6 @@ public class Account  {
   private Group group = null;
   @ApiModelProperty(value = "")
   private Product product = null;
-  @ApiModelProperty(value = "")
-  private CommercialOrigin commercialOrigin = null;
 
  /**
    * Identificação da conta [id_processadora]
@@ -63,57 +55,6 @@ public class Account  {
 
   public Account status(String status) {
     this.status = status;
-    return this;
-  }
-
- /**
-   * Dias em atraso
-   * @return daysLate
-  **/
-  public Integer getDaysLate() {
-    return daysLate;
-  }
-
-  public void setDaysLate(Integer daysLate) {
-    this.daysLate = daysLate;
-  }
-
-  public Account daysLate(Integer daysLate) {
-    this.daysLate = daysLate;
-    return this;
-  }
-
- /**
-   * Data de registro da conta
-   * @return dtRegistration
-  **/
-  public LocalDate getDtRegistration() {
-    return dtRegistration;
-  }
-
-  public void setDtRegistration(LocalDate dtRegistration) {
-    this.dtRegistration = dtRegistration;
-  }
-
-  public Account dtRegistration(LocalDate dtRegistration) {
-    this.dtRegistration = dtRegistration;
-    return this;
-  }
-
- /**
-   * Data da última compra
-   * @return dtLastBuy
-  **/
-  public LocalDate getDtLastBuy() {
-    return dtLastBuy;
-  }
-
-  public void setDtLastBuy(LocalDate dtLastBuy) {
-    this.dtLastBuy = dtLastBuy;
-  }
-
-  public Account dtLastBuy(LocalDate dtLastBuy) {
-    this.dtLastBuy = dtLastBuy;
     return this;
   }
 
@@ -185,24 +126,6 @@ public class Account  {
     return this;
   }
 
- /**
-   * Get commercialOrigin
-   * @return commercialOrigin
-  **/
-  public CommercialOrigin getCommercialOrigin() {
-    return commercialOrigin;
-  }
-
-  public void setCommercialOrigin(CommercialOrigin commercialOrigin) {
-    this.commercialOrigin = commercialOrigin;
-  }
-
-  public Account commercialOrigin(CommercialOrigin commercialOrigin) {
-    this.commercialOrigin = commercialOrigin;
-    return this;
-  }
-
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
@@ -210,14 +133,10 @@ public class Account  {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    daysLate: ").append(toIndentedString(daysLate)).append("\n");
-    sb.append("    dtRegistration: ").append(toIndentedString(dtRegistration)).append("\n");
-    sb.append("    dtLastBuy: ").append(toIndentedString(dtLastBuy)).append("\n");
     sb.append("    person: ").append(toIndentedString(person)).append("\n");
     sb.append("    holderPerson: ").append(toIndentedString(holderPerson)).append("\n");
     sb.append("    group: ").append(toIndentedString(group)).append("\n");
     sb.append("    product: ").append(toIndentedString(product)).append("\n");
-    sb.append("    commercialOrigin: ").append(toIndentedString(commercialOrigin)).append("\n");
     sb.append("}");
     return sb.toString();
   }
