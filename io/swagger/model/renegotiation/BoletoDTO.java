@@ -77,12 +77,6 @@ public class BoletoDTO  {
   **/
   private String digitoNossoNumero = null;
 
-  @ApiModelProperty(value = "Código do Banco")
- /**
-   * Código do Banco  
-  **/
-  private String banco = null;
-
   @ApiModelProperty(value = "Aceite")
  /**
    * Aceite  
@@ -112,12 +106,6 @@ public class BoletoDTO  {
    * Locais de pagamento  
   **/
   private List<String> locaisDePagamento = null;
-
-  @ApiModelProperty(value = "Instrucões do Recibo")
- /**
-   * Instrucões do Recibo  
-  **/
-  private List<String> instrucoesRecibo = null;
 
   @ApiModelProperty(value = "Sacado")
  /**
@@ -161,17 +149,7 @@ public class BoletoDTO  {
   **/
   private String ufPagador = null;
 
-  @ApiModelProperty(value = "Codigo de barras")
- /**
-   * Codigo de barras  
-  **/
-  private String codigoDeBarras = null;
-
-  @ApiModelProperty(value = "Linha digitavel")
- /**
-   * Linha digitavel  
-  **/
-  private String linhaDigitavel = null;
+  
  /**
    * Data de processamento
    * @return dataProcessamento
@@ -371,24 +349,6 @@ public class BoletoDTO  {
   }
 
  /**
-   * Código do Banco
-   * @return banco
-  **/
-  @JsonProperty("banco")
-  public String getBanco() {
-    return banco;
-  }
-
-  public void setBanco(String banco) {
-    this.banco = banco;
-  }
-
-  public BoletoDTO banco(String banco) {
-    this.banco = banco;
-    return this;
-  }
-
- /**
    * Aceite
    * @return aceite
   **/
@@ -485,29 +445,6 @@ public class BoletoDTO  {
 
   public BoletoDTO addLocaisDePagamentoItem(String locaisDePagamentoItem) {
     this.locaisDePagamento.add(locaisDePagamentoItem);
-    return this;
-  }
-
- /**
-   * Instrucões do Recibo
-   * @return instrucoesRecibo
-  **/
-  @JsonProperty("instrucoesRecibo")
-  public List<String> getInstrucoesRecibo() {
-    return instrucoesRecibo;
-  }
-
-  public void setInstrucoesRecibo(List<String> instrucoesRecibo) {
-    this.instrucoesRecibo = instrucoesRecibo;
-  }
-
-  public BoletoDTO instrucoesRecibo(List<String> instrucoesRecibo) {
-    this.instrucoesRecibo = instrucoesRecibo;
-    return this;
-  }
-
-  public BoletoDTO addInstrucoesReciboItem(String instrucoesReciboItem) {
-    this.instrucoesRecibo.add(instrucoesReciboItem);
     return this;
   }
 
@@ -637,42 +574,6 @@ public class BoletoDTO  {
     return this;
   }
 
- /**
-   * Codigo de barras
-   * @return codigoDeBarras
-  **/
-  @JsonProperty("codigoDeBarras")
-  public String getCodigoDeBarras() {
-    return codigoDeBarras;
-  }
-
-  public void setCodigoDeBarras(String codigoDeBarras) {
-    this.codigoDeBarras = codigoDeBarras;
-  }
-
-  public BoletoDTO codigoDeBarras(String codigoDeBarras) {
-    this.codigoDeBarras = codigoDeBarras;
-    return this;
-  }
-
- /**
-   * Linha digitavel
-   * @return linhaDigitavel
-  **/
-  @JsonProperty("linhaDigitavel")
-  public String getLinhaDigitavel() {
-    return linhaDigitavel;
-  }
-
-  public void setLinhaDigitavel(String linhaDigitavel) {
-    this.linhaDigitavel = linhaDigitavel;
-  }
-
-  public BoletoDTO linhaDigitavel(String linhaDigitavel) {
-    this.linhaDigitavel = linhaDigitavel;
-    return this;
-  }
-
 
   @Override
   public String toString() {
@@ -690,13 +591,11 @@ public class BoletoDTO  {
     sb.append("    carteira: ").append(toIndentedString(carteira)).append("\n");
     sb.append("    nossoNumero: ").append(toIndentedString(nossoNumero)).append("\n");
     sb.append("    digitoNossoNumero: ").append(toIndentedString(digitoNossoNumero)).append("\n");
-    sb.append("    banco: ").append(toIndentedString(banco)).append("\n");
     sb.append("    aceite: ").append(toIndentedString(aceite)).append("\n");
     sb.append("    especieDoDocumento: ").append(toIndentedString(especieDoDocumento)).append("\n");
     sb.append("    especie: ").append(toIndentedString(especie)).append("\n");
     sb.append("    instrucoes: ").append(toIndentedString(instrucoes)).append("\n");
     sb.append("    locaisDePagamento: ").append(toIndentedString(locaisDePagamento)).append("\n");
-    sb.append("    instrucoesRecibo: ").append(toIndentedString(instrucoesRecibo)).append("\n");
     sb.append("    nomePagador: ").append(toIndentedString(nomePagador)).append("\n");
     sb.append("    documentoPagador: ").append(toIndentedString(documentoPagador)).append("\n");
     sb.append("    logradouroPagador: ").append(toIndentedString(logradouroPagador)).append("\n");
@@ -704,8 +603,6 @@ public class BoletoDTO  {
     sb.append("    cepPagador: ").append(toIndentedString(cepPagador)).append("\n");
     sb.append("    cidadePagador: ").append(toIndentedString(cidadePagador)).append("\n");
     sb.append("    ufPagador: ").append(toIndentedString(ufPagador)).append("\n");
-    sb.append("    codigoDeBarras: ").append(toIndentedString(codigoDeBarras)).append("\n");
-    sb.append("    linhaDigitavel: ").append(toIndentedString(linhaDigitavel)).append("\n");
     sb.append("}");
     return sb.toString();
   }

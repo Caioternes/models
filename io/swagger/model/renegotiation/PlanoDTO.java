@@ -27,17 +27,7 @@ public class PlanoDTO  {
   **/
   private BigDecimal valorParcela = null;
 
-  @ApiModelProperty(value = "Data mínima entrada")
- /**
-   * Data mínima entrada  
-  **/
-  private String dataMinimaEntrada = null;
-
-  @ApiModelProperty(value = "Data máxima entrada")
- /**
-   * Data máxima entrada  
-  **/
-  private String dataMaximaEntrada = null;
+  
 
  /**
    * Numero do plano
@@ -93,42 +83,6 @@ public class PlanoDTO  {
     return this;
   }
 
- /**
-   * Data mínima entrada
-   * @return dataMinimaEntrada
-  **/
-  @JsonProperty("dataMinimaEntrada")
-  public String getDataMinimaEntrada() {
-    return dataMinimaEntrada;
-  }
-
-  public void setDataMinimaEntrada(String dataMinimaEntrada) {
-    this.dataMinimaEntrada = dataMinimaEntrada;
-  }
-
-  public PlanoDTO dataMinimaEntrada(String dataMinimaEntrada) {
-    this.dataMinimaEntrada = dataMinimaEntrada;
-    return this;
-  }
-
- /**
-   * Data máxima entrada
-   * @return dataMaximaEntrada
-  **/
-  @JsonProperty("dataMaximaEntrada")
-  public String getDataMaximaEntrada() {
-    return dataMaximaEntrada;
-  }
-
-  public void setDataMaximaEntrada(String dataMaximaEntrada) {
-    this.dataMaximaEntrada = dataMaximaEntrada;
-  }
-
-  public PlanoDTO dataMaximaEntrada(String dataMaximaEntrada) {
-    this.dataMaximaEntrada = dataMaximaEntrada;
-    return this;
-  }
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
@@ -137,8 +91,6 @@ public class PlanoDTO  {
     sb.append("    plano: ").append(toIndentedString(plano)).append("\n");
     sb.append("    valorEntrada: ").append(toIndentedString(valorEntrada)).append("\n");
     sb.append("    valorParcela: ").append(toIndentedString(valorParcela)).append("\n");
-    sb.append("    dataMinimaEntrada: ").append(toIndentedString(dataMinimaEntrada)).append("\n");
-    sb.append("    dataMaximaEntrada: ").append(toIndentedString(dataMaximaEntrada)).append("\n");
     sb.append("}");
     return sb.toString();
   }

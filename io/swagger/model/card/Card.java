@@ -19,8 +19,7 @@ public class Card  {
   @ApiModelProperty(value = "Nome do portador do cartão")
   private String holderName = null;
   @ApiModelProperty(value = "Validade do cartão")
-
-  private LocalDate sinceAt = null;
+  private LocalDate validAt = null;
   @ApiModelProperty(value = "")
   private Account account = null;
   @ApiModelProperty(value = "")
