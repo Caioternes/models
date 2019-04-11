@@ -37,12 +37,6 @@ public class InvoiceData  {
   **/
   private LocalDate dataVencimento = null;
 
-  @ApiModelProperty(value = "Data Fechamento")
- /**
-   * Data Fechamento  
-  **/
-  private LocalDate dataCriacaoConta = null;
-
   @ApiModelProperty(value = "Valor do boleto")
  /**
    * Valor do boleto  
@@ -67,23 +61,11 @@ public class InvoiceData  {
   **/
   private String agencia = null;
 
-  @ApiModelProperty(value = "Codigo do beneficiario")
- /**
-   * Codigo do beneficiario  
-  **/
-  private String codigoBeneficiario = null;
-
   @ApiModelProperty(value = "Numero do convenio")
  /**
    * Numero do convenio  
   **/
   private String numeroConvenio = null;
-
-  @ApiModelProperty(value = "Digito do codigo do beneficiario")
- /**
-   * Digito do codigo do beneficiario  
-  **/
-  private String digitoCodigoBeneficiario = null;
 
   @ApiModelProperty(value = "Carteira")
  /**
@@ -96,18 +78,6 @@ public class InvoiceData  {
    * Nosso numero  
   **/
   private String nossoNumero = null;
-
-  @ApiModelProperty(value = "Digito nosso numero")
- /**
-   * Digito nosso numero  
-  **/
-  private String digitoNossoNumero = null;
-
-  @ApiModelProperty(value = "Banco")
- /**
-   * Banco  
-  **/
-  private String banco = null;
 
   @ApiModelProperty(value = "Aceite")
  /**
@@ -181,17 +151,6 @@ public class InvoiceData  {
   **/
   private String ufPagador = null;
 
-  @ApiModelProperty(value = "Codigo de barras")
- /**
-   * Codigo de barras  
-  **/
-  private String codigoDeBarras = null;
-
-  @ApiModelProperty(value = "Linha digitavel")
- /**
-   * Linha digitavel  
-  **/
-  private String linhaDigitavel = null;
  /**
    * Numero do documento
    * @return numeroDoDocumento
@@ -261,24 +220,6 @@ public class InvoiceData  {
 
   public InvoiceData dataVencimento(LocalDate dataVencimento) {
     this.dataVencimento = dataVencimento;
-    return this;
-  }
-
- /**
-   * Data Fechamento
-   * @return dataCriacaoConta
-  **/
-  @JsonProperty("dataCriacaoConta")
-  public LocalDate getDataCriacaoConta() {
-    return dataCriacaoConta;
-  }
-
-  public void setDataCriacaoConta(LocalDate dataCriacaoConta) {
-    this.dataCriacaoConta = dataCriacaoConta;
-  }
-
-  public InvoiceData dataCriacaoConta(LocalDate dataCriacaoConta) {
-    this.dataCriacaoConta = dataCriacaoConta;
     return this;
   }
 
@@ -355,24 +296,6 @@ public class InvoiceData  {
   }
 
  /**
-   * Codigo do beneficiario
-   * @return codigoBeneficiario
-  **/
-  @JsonProperty("codigoBeneficiario")
-  public String getCodigoBeneficiario() {
-    return codigoBeneficiario;
-  }
-
-  public void setCodigoBeneficiario(String codigoBeneficiario) {
-    this.codigoBeneficiario = codigoBeneficiario;
-  }
-
-  public InvoiceData codigoBeneficiario(String codigoBeneficiario) {
-    this.codigoBeneficiario = codigoBeneficiario;
-    return this;
-  }
-
- /**
    * Numero do convenio
    * @return numeroConvenio
   **/
@@ -387,24 +310,6 @@ public class InvoiceData  {
 
   public InvoiceData numeroConvenio(String numeroConvenio) {
     this.numeroConvenio = numeroConvenio;
-    return this;
-  }
-
- /**
-   * Digito do codigo do beneficiario
-   * @return digitoCodigoBeneficiario
-  **/
-  @JsonProperty("digitoCodigoBeneficiario")
-  public String getDigitoCodigoBeneficiario() {
-    return digitoCodigoBeneficiario;
-  }
-
-  public void setDigitoCodigoBeneficiario(String digitoCodigoBeneficiario) {
-    this.digitoCodigoBeneficiario = digitoCodigoBeneficiario;
-  }
-
-  public InvoiceData digitoCodigoBeneficiario(String digitoCodigoBeneficiario) {
-    this.digitoCodigoBeneficiario = digitoCodigoBeneficiario;
     return this;
   }
 
@@ -441,42 +346,6 @@ public class InvoiceData  {
 
   public InvoiceData nossoNumero(String nossoNumero) {
     this.nossoNumero = nossoNumero;
-    return this;
-  }
-
- /**
-   * Digito nosso numero
-   * @return digitoNossoNumero
-  **/
-  @JsonProperty("digitoNossoNumero")
-  public String getDigitoNossoNumero() {
-    return digitoNossoNumero;
-  }
-
-  public void setDigitoNossoNumero(String digitoNossoNumero) {
-    this.digitoNossoNumero = digitoNossoNumero;
-  }
-
-  public InvoiceData digitoNossoNumero(String digitoNossoNumero) {
-    this.digitoNossoNumero = digitoNossoNumero;
-    return this;
-  }
-
- /**
-   * Banco
-   * @return banco
-  **/
-  @JsonProperty("banco")
-  public String getBanco() {
-    return banco;
-  }
-
-  public void setBanco(String banco) {
-    this.banco = banco;
-  }
-
-  public InvoiceData banco(String banco) {
-    this.banco = banco;
     return this;
   }
 
@@ -706,43 +575,6 @@ public class InvoiceData  {
     return this;
   }
 
- /**
-   * Codigo de barras
-   * @return codigoDeBarras
-  **/
-  @JsonProperty("codigoDeBarras")
-  public String getCodigoDeBarras() {
-    return codigoDeBarras;
-  }
-
-  public void setCodigoDeBarras(String codigoDeBarras) {
-    this.codigoDeBarras = codigoDeBarras;
-  }
-
-  public InvoiceData codigoDeBarras(String codigoDeBarras) {
-    this.codigoDeBarras = codigoDeBarras;
-    return this;
-  }
-
- /**
-   * Linha digitavel
-   * @return linhaDigitavel
-  **/
-  @JsonProperty("linhaDigitavel")
-  public String getLinhaDigitavel() {
-    return linhaDigitavel;
-  }
-
-  public void setLinhaDigitavel(String linhaDigitavel) {
-    this.linhaDigitavel = linhaDigitavel;
-  }
-
-  public InvoiceData linhaDigitavel(String linhaDigitavel) {
-    this.linhaDigitavel = linhaDigitavel;
-    return this;
-  }
-
-
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
@@ -752,18 +584,13 @@ public class InvoiceData  {
     sb.append("    dataProcessamento: ").append(toIndentedString(dataProcessamento)).append("\n");
     sb.append("    dataDocumento: ").append(toIndentedString(dataDocumento)).append("\n");
     sb.append("    dataVencimento: ").append(toIndentedString(dataVencimento)).append("\n");
-    sb.append("    dataCriacaoConta: ").append(toIndentedString(dataCriacaoConta)).append("\n");
     sb.append("    valorBoleto: ").append(toIndentedString(valorBoleto)).append("\n");
     sb.append("    nomeBeneficiario: ").append(toIndentedString(nomeBeneficiario)).append("\n");
     sb.append("    documentoBeneficiario: ").append(toIndentedString(documentoBeneficiario)).append("\n");
     sb.append("    agencia: ").append(toIndentedString(agencia)).append("\n");
-    sb.append("    codigoBeneficiario: ").append(toIndentedString(codigoBeneficiario)).append("\n");
     sb.append("    numeroConvenio: ").append(toIndentedString(numeroConvenio)).append("\n");
-    sb.append("    digitoCodigoBeneficiario: ").append(toIndentedString(digitoCodigoBeneficiario)).append("\n");
     sb.append("    carteira: ").append(toIndentedString(carteira)).append("\n");
     sb.append("    nossoNumero: ").append(toIndentedString(nossoNumero)).append("\n");
-    sb.append("    digitoNossoNumero: ").append(toIndentedString(digitoNossoNumero)).append("\n");
-    sb.append("    banco: ").append(toIndentedString(banco)).append("\n");
     sb.append("    aceite: ").append(toIndentedString(aceite)).append("\n");
     sb.append("    especieDoDocumento: ").append(toIndentedString(especieDoDocumento)).append("\n");
     sb.append("    especie: ").append(toIndentedString(especie)).append("\n");
@@ -776,8 +603,6 @@ public class InvoiceData  {
     sb.append("    cepPagador: ").append(toIndentedString(cepPagador)).append("\n");
     sb.append("    cidadePagador: ").append(toIndentedString(cidadePagador)).append("\n");
     sb.append("    ufPagador: ").append(toIndentedString(ufPagador)).append("\n");
-    sb.append("    codigoDeBarras: ").append(toIndentedString(codigoDeBarras)).append("\n");
-    sb.append("    linhaDigitavel: ").append(toIndentedString(linhaDigitavel)).append("\n");
     sb.append("}");
     return sb.toString();
   }

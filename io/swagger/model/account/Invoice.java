@@ -11,12 +11,6 @@ import org.joda.time.LocalDate;
  **/
 @ApiModel(description="Dados básicos de fatura")
 public class Invoice  {
-  
-  @ApiModelProperty(value = "Id da conta do cliente proprietário da fatura.")
- /**
-   * Id da conta do cliente proprietário da fatura.  
-  **/
-  private Integer idConta = null;
 
   @ApiModelProperty(value = "Apresenta a situação atual da fatura, podendo ser Aberta ou fechada.")
  /**
@@ -71,23 +65,7 @@ public class Invoice  {
    * Valor para pagamento mínimo da fatura. Esta informação só estará presente em faturas com a situação de processamento Fechada.  
   **/
   private BigDecimal saldoFaturaAnterior = null;
- /**
-   * Id da conta do cliente proprietário da fatura.
-   * @return idConta
-  **/
-  @JsonProperty("idConta")
-  public Integer getIdConta() {
-    return idConta;
-  }
 
-  public void setIdConta(Integer idConta) {
-    this.idConta = idConta;
-  }
-
-  public Invoice idConta(Integer idConta) {
-    this.idConta = idConta;
-    return this;
-  }
 
  /**
    * Apresenta a situação atual da fatura, podendo ser Aberta ou fechada.
@@ -256,7 +234,6 @@ public class Invoice  {
     StringBuilder sb = new StringBuilder();
     sb.append("class Invoice {\n");
     
-    sb.append("    idConta: ").append(toIndentedString(idConta)).append("\n");
     sb.append("    situacaoProcessamento: ").append(toIndentedString(situacaoProcessamento)).append("\n");
     sb.append("    pagamentoEfetuado: ").append(toIndentedString(pagamentoEfetuado)).append("\n");
     sb.append("    pagamentoEmAtraso: ").append(toIndentedString(pagamentoEmAtraso)).append("\n");
